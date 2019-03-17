@@ -28,3 +28,4 @@ target/
 out/
 *.MF
 resources/
+.key
