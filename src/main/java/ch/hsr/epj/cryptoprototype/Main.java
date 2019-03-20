@@ -115,7 +115,7 @@ public class Main {
     return cert;
   }
 
-  private static void startWebserver(KeyStore ks, char[] password) {
+  static void startWebserver(KeyStore ks, char[] password) {
     try {
       SSLContext context = SSLContext.getInstance("TLS");
       KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
