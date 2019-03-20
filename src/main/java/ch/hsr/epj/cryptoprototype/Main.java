@@ -36,7 +36,11 @@ public class Main {
   private static final String FRIENDLY_NAME = "Max";
 
   public static void main(String[] args) {
-    File filePath = new File(PATH).getAbsoluteFile();
+    File filePath = new File(PATH);
+    if (!filePath.exists()) {
+      filePath.mkdir();
+    }
+    filePath.getAbsoluteFile();
     char[] password = "foobar".toCharArray();
 
     KeyStore ks = null;
