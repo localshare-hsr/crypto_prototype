@@ -40,7 +40,7 @@ public class Main {
     if (!filePath.exists()) {
       filePath.mkdir();
     }
-    filePath.getAbsoluteFile();
+    filePath = filePath.getAbsoluteFile();
     char[] password = "foobar".toCharArray();
 
     KeyStore ks = null;
@@ -119,7 +119,7 @@ public class Main {
     return cert;
   }
 
-  static void startWebserver(KeyStore ks, char[] password) {
+  private static void startWebserver(KeyStore ks, char[] password) {
     try {
       SSLContext context = SSLContext.getInstance("TLS");
       KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
